@@ -12,17 +12,13 @@ Sentry is left alone - crash reports are useful.
 INSTALL
 
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/mitmproxy                       # run once to generate the CA
-open ~/.mitmproxy/mitmproxy-ca-cert.pem   # opens Keychain Access
+.venv/bin/mitmproxy # run once to generate the CA
+open ~/.mitmproxy
+# drag mitmproxy-ca-cert.pem into System > Certificates tab
+# double-click, expand "Trust", set "When using this certificate" to "Always Trust"
 
 ./run.sh
 
-
-When Keychain Access opens, the cert lands in the `login` keychain.
-Drag it into the `System` keychain (or double-click, expand "Trust",
-set "When using this certificate" to "Always Trust").
-
-After the CA is trusted, `./run.sh` flips macOS HTTP/HTTPS proxy to `127.0.0.1:8420`.
 
 Add this function to your shell rc to prefix any command:
 
