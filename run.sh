@@ -84,13 +84,18 @@ chmod 700 ~/.mitmproxy 2>/dev/null || true
 IGNORE=(
   '(.+\.)?icloud\.com:443$'
   '(.+\.)?push\.apple\.com:443$'
+  '(.+\.)?apple-cloudkit\.com:443$'
   'gateway\.icloud\.com:443$'
   '(.+\.)?gc\.apple\.com:443$'
   '(.+\.)?smoot\.apple\.com:443$'
   '(.+\.)?itunes\.apple\.com:443$'
+  '(.+\.)?apps\.apple\.com:443$'
   '(.+\.)?1password\.com:443$'
   '(.+\.)?1password\.ca:443$'
   '(.+\.)?1password\.eu:443$'
+  '(.+\.)?googleuserconent\.com:443$'
+  '(.+\.)?proton\.me:443$'
+  '(.+\.)?push\.services\.mozilla\.com:443$'
 )
 IGNORE_ARGS=()
 ALL_IGNORE=("${IGNORE[@]}")
